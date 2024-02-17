@@ -29,3 +29,6 @@ const swiper = new Swiper('.swiper', {
 });
 
 
+const pause = document.querySelector('.bullet');
+
+console.log(pause);
