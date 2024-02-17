@@ -1,7 +1,4 @@
 
-import { } from './lib/index.js';
-
-
 const swiper = new Swiper('.swiper', {
   slidesPerView: 2,
   centeredSlides: true,
