@@ -27,8 +27,3 @@ const swiper = new Swiper('.swiper', {
   parallax: true,
   
 });
-
-
-const pause = document.querySelector('.bullet');
-
-console.log(pause);
