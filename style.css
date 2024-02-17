@@ -9,9 +9,13 @@ body {
 }
 
 /* CSS Resets */
-body, ul {
+body, ul, p {
   margin: unset;
   padding: unset;
+}
+
+span {
+  all: unset;
 }
 
 li {
@@ -60,10 +64,10 @@ img {
 }
 
 .swiper-button-prev {
-  margin-left: 100px;
+  margin-left: 5%;
 }
 .swiper-button-next {
-  margin-right: 100px;
+  margin-right: 5%;
 }
 
 .swiper-button-prev:hover,
@@ -109,6 +113,7 @@ body {
 .slider {
   width: 100vw;
   height: 400px;
+  padding: 0 30px;
   
   position: absolute;
   top: 50%;
@@ -136,7 +141,8 @@ body {
 .intro-title {
   font-size: 50px;
   font-weight: 700;
-  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
   background-color: yellow;
 }
 
@@ -150,6 +156,7 @@ body {
 .intro-cover {
   flex-basis: 0;
   min-width: 300px;
+  object-fit: contain;
 }
 
 
@@ -166,6 +173,7 @@ body {
 .member-cover {
   flex-basis: 0;
   min-width: 200px;
+  object-fit: contain;
 }
 
 .member-text {
@@ -204,10 +212,117 @@ body {
 
 .member-char li::before {
   content: ' ';
-  width: 30px;
+  min-width: 30px;
   height: 30px;
   background-image: url('assets/gyodong.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+
+
+@media (max-width: 1080px) {
+  .slider {
+    padding: 0 10px;
+  }
+
+  .intro {
+    gap: 10px;
+  }
+  
+  .intro-text {
+    min-width: 200px;
+  }
+
+  .intro-title {
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 3.6rem;
+  }
+
+  .intro-desc {
+    font-size: 2rem;
+  }
+
+  .intro-cover {
+    min-width: 200px;
+  }
+
+  .member-cover {
+    min-width: 180px;
+  }
+
+  .member-text {
+    min-width: 180px;
+  }
+
+  .member-title {
+    font-size: 2rem;
+  }
+
+  .member-char li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 800px) {
+  .intro {
+    gap: 5px;
+  }
+  
+  .intro-text {
+    min-width: 150px;
+  }
+
+  .intro-title {
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 2.4rem;
+  }
+
+  .intro-desc {
+    font-size: 1.6rem;
+  }
+
+  .intro-cover {
+    min-width: 180px;
+  }
+
+  .member {
+    display: block;
+    padding: 0 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .member-cover {
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.2;
+  }
+
+  .member-text {
+    margin: 0 auto;  
+  }
+
+  .member-char li {
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 680px) {
+  .intro {
+    display: block;
+    overflow: hidden;
+  }
+
+  .intro-desc {
+    margin: 20px 0;
+  }
+}
